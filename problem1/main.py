@@ -1,5 +1,14 @@
 def remove_duplicates(array):
-    return 0
+    track = set()
+    unique_list = []
+
+    for i in array:
+        if i not in track:
+            unique_list.append(i)
+            track.add(i)
+    
+    number_arrays = len(unique_list)
+    return number_arrays
 
 if __name__ == "__main__":
     print(remove_duplicates([2, 3, 3, 3, 6, 9, 9]))  # 4
